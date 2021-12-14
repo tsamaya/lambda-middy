@@ -25,4 +25,9 @@ describe('greetings', () => {
   it('generates the correct greetings for thuy', () => {
     expect(greetings('thuy')).toBe('Xin chào!');
   });
+  it('generates an Error', () => {
+    expect(() => {
+      greetings('error');
+    }).toThrow();
+  });
 });

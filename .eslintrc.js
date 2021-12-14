@@ -11,5 +11,5 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 13,
   },
-  rules: {},
+  rules: { 'no-console': ['error', { allow: ['warn', 'error'] }] },
 };
