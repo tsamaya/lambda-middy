@@ -1,0 +1,19 @@
+service: lambda-middy
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-west-2'}
+
+plugins:
+  - serverless-offline
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
