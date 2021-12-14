@@ -1,6 +1,7 @@
 # lambda-middy
 
 ![CircleCI](https://img.shields.io/circleci/build/gh/tsamaya/lambda-middy)
+![Codecov](https://img.shields.io/codecov/c/gh/tsamaya/lambda-middy)
 
 ## Prerequistes
 
@@ -18,6 +19,9 @@
 
 ```bash
 npx serverless invoke local -f hello
+{
+  "message": "👋"
+}
 ```
 
 ### offline dev
@@ -30,8 +34,14 @@ then
 
 ```bash
 curl -s http://localhost:3001/dev/hello | jq
+{
+  "message": "👋"
+}
 
 curl -s "http://localhost:3001/dev/hello?name=andy" | jq
+{
+  "message": "Hello!"
+}
 ```
 
 ## deploy
