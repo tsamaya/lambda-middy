@@ -4,43 +4,53 @@
 
 ## Prerequistes
 
-node 14
-jq (nice to have)
+- node 14
+- jq (nice to have)
 
 ## get started
 
-clone
-npm i
+- clone
+- npm i
 
 ## test
 
 ### invoke local
 
+```bash
 npx serverless invoke local -f hello
+```
 
-### offline
+### offline dev
 
+```bash
 npm run start:offline
+```
 
 then
 
+```bash
 curl -s http://localhost:3001/dev/hello | jq
 
 curl -s "http://localhost:3001/dev/hello?name=andy" | jq
+```
 
 ## deploy
 
+```bash
 export AWS_ACCESS_KEY_ID=<your id>
 export AWS_SECRET_ACCESS_KEY=<your secret>
 
 npm run deploy
+```
 
 ## cleanup
 
+```bash
 export AWS_ACCESS_KEY_ID=<your id>
 export AWS_SECRET_ACCESS_KEY=<your secret>
 
 npm run remove
+```
 
 ## Contributing
 
