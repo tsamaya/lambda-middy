@@ -1,5 +1,7 @@
 # lambda-middy
 
+![CircleCI](https://img.shields.io/circleci/build/gh/tsamaya/lambda-middy)
+
 ## Prerequistes
 
 node 14
