@@ -1,4 +1,4 @@
-const handler = require('./handler');
+const handler = require('../handler');
 
 describe('hello', () => {
   it('generates the correct greetings for unknown', async () => {
