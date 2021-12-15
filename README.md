@@ -1,7 +1,7 @@
 # lambda-middy
 
-![CircleCI](https://img.shields.io/circleci/build/gh/tsamaya/lambda-middy)
-![Codecov](https://img.shields.io/codecov/c/gh/tsamaya/lambda-middy)
+[![CircleCI](https://img.shields.io/circleci/build/gh/tsamaya/lambda-middy)](https://github.com/tsamaya/lambda-middy)
+[![Codecov](https://img.shields.io/codecov/c/gh/tsamaya/lambda-middy)](https://app.codecov.io/gh/tsamaya/lambda-middy)
 
 ## Prerequistes
 
