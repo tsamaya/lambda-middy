@@ -62,6 +62,50 @@ export AWS_SECRET_ACCESS_KEY=<your secret>
 npm run remove
 ```
 
+## notes
+
+without middy
+
+```js
+const baseHhandler = async (event) => {
+  try {
+    console.log(event);
+    const { name } = event.queryStringParameters || 'unknown';
+    const message = greetings(name);
+    const response = {
+      statusCode: 200,
+      body: JSON.stringify({ message }),
+    };
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.error(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error,
+      }),
+    };
+  }
+};
+```
+
+with middy
+
+```js
+const { name } = event.queryStringParameters || 'unknown';
+  const message = greetings(name);
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message }),
+  };
+};
+
+const handler = middy(baseHhandler)
+  .use(inputOutputLogger())
+  .use(httpErrorHandler());
+```
+
 ## Contributing
 
 Anyone and everyone is welcome to contribute.
