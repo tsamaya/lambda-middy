@@ -42,6 +42,24 @@ curl -s "http://localhost:3001/dev/hello?name=andy" | jq
 {
   "message": "Hello!"
 }
+
+curl -s "http://localhost:3001/dev/hello?name=error" -i
+HTTP/1.1 500 Internal Server Error
+access-control-allow-origin: *
+x-dns-prefetch-control: off
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-download-options: noopen
+x-content-type-options: nosniff
+referrer-policy: no-referrer
+x-permitted-cross-domain-policies: none
+content-type: text/plain; charset=utf-8
+cache-control: no-cache
+content-length: 16
+Date: Wed, 15 Dec 2021 11:35:47 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+Unexpected error
 ```
 
 ## deploy
